@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>岡大生講師の119 | 東福山駅周辺の緊急テスト対策</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* デザイン指定（CSS） */
+        :root {
+            --primary: #00A960; /* midoriの緑 */
+            --accent: #E60012;  /* 119の赤 */
+            --dark: #0f2350;    /* 信頼の紺 */
+            --gold: #f5b120;    /* キャンペーンの金 */
+            --light: #f4f7f6;
+            --white: #ffffff;
+            --text: #333333;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--light);
+        }
+
+        a { text-decoration: none; transition: 0.3s; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        
+        /* タイトル装飾 */
+        .section-title { font-size: 1.8rem; text-align: center; color: var(--dark); margin-bottom: 40px; font-weight: 900; }
+        .section-title::after { content: ""; display: block; width: 60px; height: 4px; background: var(--accent); margin: 15px auto 0; border-radius: 2px; }
+
+        /* ヘッダー */
+        .header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo { font-size: 1.6rem; color: var(--accent); margin: 0; font-weight: 900; line-height: 1; display: flex; align-items: center; flex-wrap: wrap; }
+        .logo span { color: var(--dark); }
+        
+        .midori-badge {
+            background-color: var(--primary);
+            color: white !important;
+            font-size: 0.75rem;
+            padding: 5px 12px;
+            border-radius: 4px;
+            margin-left: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+            vertical-align: middle;
+        }
+        .midori-badge:hover { transform: translateY(-2px); opacity: 0.9; }
+        
+        .nav { display: flex; align-items: center; }
+        .nav a { color: var(--dark); margin-left: 20px; font-weight: bold; font-size: 0.9rem; }
+        .nav-recruit { color: var(--primary) !important; border: 2px solid var(--primary); padding: 5px 12px; border-radius: 4px; }
+        .nav-recruit:hover { background: var(--primary); color: white !important; }
+        .btn-header { background: var(--accent); color: white !important; padding: 10px 20px; border-radius: 50px; box-shadow: 0 4px 10px rgba(230,0,18,0.3); }
+        .btn-header:hover { transform: translateY(-2px); }
+
+        /* メインビジュアル */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a3b70 100%); 
+            color: white; padding: 100px 20px; text-align: center; position: relative; overflow: hidden;
+        }
+        .hero-title { font-size: 3rem; margin-bottom: 20px; line-height: 1.3; font-weight: 900; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        .hero-sub { font-size: 1.2rem; margin-bottom: 40px; opacity: 0.95; }
+        .badge { background: var(--gold); color: var(--dark); padding: 8px 20px; font-weight: bold; border-radius: 4px; display: inline-block; margin-bottom: 20px; font-size: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+
+        /* CVボタン */
+        .btn-primary { display: inline-block; background: var(--accent); color: white; padding: 18px 50px; border-radius: 50px; font-size: 1.3rem; font-weight: bold; box-shadow: 0 4px 15px rgba(230, 0, 18, 0.4); border-bottom: 4px solid #b3000e; }
+        .btn-primary span { font-size: 0.9rem; display: block; font-weight: normal; margin-top: 5px; opacity: 0.9; }
+        .btn-primary:hover { transform: translateY(2px); border-bottom: 2px solid #b3000e; box-shadow: none; }
+        .btn-line { background: #06C755; box-shadow: 0 4px 15px rgba(6, 199, 85, 0.4); border-bottom: 4px solid #05a145; }
+        .btn-line:hover { transform: translateY(2px); border-bottom: 2px solid #05a145; box-shadow: none; }
+
+        /* キャンペーン */
+        .campaign { background: var(--gold); padding: 40px 0; text-align: center; color: var(--dark); }
+        .section-title-yellow { font-size: 1.6rem; margin: 0 0 25px; font-weight: 900; letter-spacing: 0.05em; }
+        .campaign-box { background: white; max-width: 600px; margin: 0 auto; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); transform: rotate(-1deg); }
+        .campaign-text { font-weight: bold; font-size: 1.2rem; margin: 0 0 10px; }
+        .marker-red { background: linear-gradient(transparent 60%, #ffcccc 60%); padding: 0 5px; }
+        .campaign-price { margin: 10px 0; font-weight: bold; color: #777; font-size: 1.1rem; }
+        .price-big { font-size: 3rem; color: var(--accent); font-weight: 900; line-height: 1; }
+        .arrow { color: var(--dark); margin: 0 15px; font-weight: bold; font-size: 1.5rem; vertical-align: middle; }
+        .campaign-note { font-size: 0.8rem; color: #666; margin-top: 10px; }
+
+        /* 特徴 */
+        .features { padding: 80px 0; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .feature-item { background: white; padding: 40px 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 5px solid var(--primary); }
+        .feature-icon { font-size: 3.5rem; margin-bottom: 20px; display: block; }
+        .feature-item h4 { color: var(--dark); font-size: 1.3rem; margin-bottom: 15px; font-weight: 900; }
+
+        /* 料金表 */
+        .price { background: white; padding: 80px 0; }
+        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        
+        .price-card { 
+            border: 1px solid #ddd; border-radius: 10px; overflow: hidden; background: white; 
+            transition: 0.3s; position: relative; display: flex; flex-direction: column;
+        }
+        .price-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        
+        .recommend-badge { position: absolute; top: 0; right: 0; background: var(--gold); color: var(--dark); font-size: 0.8rem; font-weight: bold; padding: 5px 15px; border-bottom-left-radius: 10px; z-index: 10; }
+        
+        .card-header { background: var(--dark); color: white; padding: 15px; text-align: center; }
+        .course-name { font-size: 1.1rem; font-weight: bold; display: block; margin-bottom: 5px; }
+        .course-sub { font-size: 0.8rem; opacity: 0.8; }
+        
+        .header-basic { background: #444; }
+        .header-adv { background: var(--primary); }
+        .header-pro { background: var(--accent); }
+        .header-long { background: var(--dark); }
+
+        .card-body { padding: 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-price { font-size: 1.8rem; font-weight: 900; color: var(--dark); margin-bottom: 10px; line-height: 1; }
+        .card-price .yen { font-size: 1rem; }
+        .card-detail { font-size: 0.9rem; color: #666; margin-bottom: 15px; border-bottom: 1px dashed #eee; padding-bottom: 10px; }
+        .discount-tag { color: var(--accent); font-weight: bold; font-size: 0.9rem; background: #ffebeb; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }
+        
+        .price-note { text-align: left; background: #f9f9f9; padding: 25px; border-radius: 8px; font-size: 0.9rem; color: #555; margin-top: 30px; border-left: 5px solid var(--accent); }
+        .price-note h4 { margin: 0 0 10px; color: var(--dark); font-size: 1rem; }
+        .price-note ul { padding-left: 20px; margin-bottom: 15px; }
+        .price-note strong { color: var(--accent); }
+
+        /* 流れ */
+        .flow { padding: 80px 0; background: #f4f7f6; }
+        .step-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .step { flex: 1; min-width: 250px; background: white; padding: 30px; border-radius: 10px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .step-num { display: inline-block; background: var(--primary); color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 15px; font-size: 0.9rem; }
+        .step p { font-weight: bold; font-size: 1.1rem; margin: 0; }
+        .caution-text { font-size: 0.8rem; color: var(--accent); font-weight: bold; margin-top: 5px; display: block; }
+
+        /* アクセスマップ */
+        .access { background: white; padding: 80px 0; text-align: center; }
+        .map-wrapper { width: 100%; height: 400px; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 20px; }
+        .map-wrapper iframe { border: 0; width: 100%; height: 100%; }
+
+        /* コンタクト */
+        .contact { text-align: center; padding: 100px 0; background: #eef9f2; }
+        .contact-title { font-size: 2rem; color: var(--dark); font-weight: 900; margin-bottom: 10px; }
+        .qr-box { margin: 40px auto; width: 200px; height: 200px; background: white; padding: 10px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .qr-img { width: 100%; height: 100%; object-fit: contain; }
+
+        .operator { background: white; padding: 60px 0; text-align: center; border-top: 5px solid var(--primary); }
+        .operator p { margin-bottom: 30px; font-weight: bold; }
+        .btn-midori {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 169, 96, 0.3);
+            border-bottom: 4px solid #007a45;
+        }
+        .btn-midori:hover { transform: translateY(2px); border-bottom: 2px solid #007a45; box-shadow: none; }
+
+        .footer { background: var(--dark); color: white; text-align: center; padding: 30px; font-size: 0.9rem; }
+        .footer a { color: #ccc; text-decoration: underline; }
+
+        /* スマホ対応 */
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; }
+            .nav { margin-top: 15px; flex-wrap: wrap; justify-content: center; width: 100%; }
+            .nav a { margin: 5px 10px; font-size: 0.8rem; }
+            .btn-header { display: none; }
+            .logo { justify-content: center; margin-bottom: 5px; }
+            
+            .hero-title { font-size: 2rem; }
+            .price-grid { grid-template-columns: 1fr; }
+            .price-card { margin-bottom: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <h1 class="logo">
+                <span>岡大生講師の</span>119
+                <a href="https://www.sanyo-seinen-teachers.com" target="_blank" class="midori-badge">
+                    運営：いなかの個人塾 midori ↗
+                </a>
+            </h1>
+            <nav class="nav">
+                <a href="#about">119とは</a>
+                <a href="#price">料金</a>
+                <a href="recruit.html" class="nav-recruit">講師募集</a>
+                <a href="#contact" class="btn-header">LINEで呼ぶ</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">東福山エリア限定</span>
+            <h2 class="hero-title">「家」でも「塾」でも。<br>テスト3日前、駆け込みOK。</h2>
+            <p class="hero-sub">最短即日対応。現役岡大生による<br>学習の救急車サービス、出動。</p>
+            <a href="#contact" class="btn-primary">今すぐLINEで相談する<br><span>（入会金・解約金 0円）</span></a>
+        </div>
+    </section>
+
+    <section class="campaign">
+        <div class="container">
+            <h3 class="section-title-yellow">春の緊急応援キャンペーン</h3>
+            <div class="campaign-box">
+                <p class="campaign-text">友達紹介で<span class="marker-red">双方 1,500円OFF！</span></p>
+                <p class="campaign-price">通常 5,500円 <span class="arrow">→</span> <span class="price-big">4,000円</span><span class="tax">（税込）</span></p>
+                <p class="campaign-note">※2026年3月末まで / 初回限定</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="features">
+        <div class="container">
+            <h3 class="section-title">岡大生講師の119が選ばれる理由</h3>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">🎓</span>
+                    <h4>全員が「岡大生」</h4>
+                    <p>東福山周辺に住む厳選された岡山大学生のみが在籍。学力だけでなく、親しみやすさも抜群です。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🏫</span>
+                    <h4>選べる「場所」</h4>
+                    <p>基本はご自宅への訪問ですが、家で集中できない場合は<strong>「いなかの個人塾 midori（伊勢丘）」</strong>の教室で指導を受けることも可能です。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">💰</span>
+                    <h4>安心の都度払い</h4>
+                    <p>高額なローンや教材販売は一切なし。指導終了後にその場で支払う明朗会計です。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="price" class="price">
+        <div class="container">
+            <h3 class="section-title">コース・料金</h3>
+            <p style="text-align: center; margin-bottom: 30px;">入会金・教材費すべて0円。必要なのは「授業料」だけ。<br><strong>※ご自宅・教室どちらを選んでも料金は同じです。</strong></p>
+            
+            <div class="price-grid">
+                <div class="price-card">
+                    <div class="card-header header-basic">
+                        <span class="course-name">応急処置コース</span>
+                        <span class="course-sub">まずはここから</span>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <div class="card-price">5,500<span class="yen">円</span></div>
+                            <div class="card-detail">90分 × 1回</div>
+                        </div>
+                        <div style="font-size:0.8rem; color:#888;">スタンダードプラン</div>
+                    </div>
+                </div>
+
+                <div class="price-card">
+                    <div class="card-header header-adv">
+                        <span class="course-name">集中治療コース</span>
+                        <span class="course-sub">土日で弱点克服</span>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <div class="discount-tag">1,000円お得</div>
+                            <div class="card-price">10,000<span class="yen">円</span></div>
+                            <div class="card-detail">90分 × 2回</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-card">
+                    <div class="recommend-badge">人気No.1</div>
+                    <div class="card-header header-pro">
+                        <span class="course-name">奇跡の逆転コース</span>
+                        <span class="course-sub">テスト直前3日間</span>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <div class="discount-tag">2,000円お得</div>
+                            <div class="card-price">14,500<span class="yen">円</span></div>
+                            <div class="card-detail">90分 × 3回</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-card">
+                    <div class="card-header header-long">
+                        <span class="course-name">ロング集中コース</span>
+                        <span class="course-sub">2教科じっくり</span>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <div class="card-price">7,500<span class="yen">円</span></div>
+                            <div class="card-detail">120分 × 1回</div>
+                        </div>
+                        <div style="font-size:0.8rem; color:#888;">たっぷり学びたい方に</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="price-note">
+                <h4>【お支払い・ご利用ルール】</h4>
+                <ul>
+                    <li>価格はすべて税込です。東福山駅周辺エリアは交通費込みです。</li>
+                    <li>複数回コース（2回・3回）は、<strong>初回から2週間以内</strong>にご利用ください。</li>
+                    <li>複数回コースのお支払いは、<strong>初回指導終了時に全額現金払い</strong>となります。</li>
+                </ul>
+
+                <h4>【担当講師の指名・交代について】</h4>
+                <ul>
+                    <li>複数回コースは原則同じ講師が担当しますが、<strong>日ごとに担当を変更することも可能</strong>です。</li>
+                    <li>万が一相性が合わない場合、LINEでご連絡いただければ<strong>無料で他の講師に交代</strong>いたします。</li>
+                    <li>2回目以降のご利用時も、「前回とは違う人で」といったリクエストが可能です。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="flow">
+        <div class="container">
+            <h3 class="section-title">ご利用の流れ</h3>
+            <div class="step-container">
+                <div class="step">
+                    <span class="step-num">STEP 1</span>
+                    <p>LINEで「助けて」と送信<br>（日時・科目・場所を連絡）</p>
+                    <span class="caution-text">※必ず保護者の了承を得てください</span>
+                </div>
+                <div class="step">
+                    <span class="step-num">STEP 2</span>
+                    <p>最短当日に講師を手配<br>ご自宅 または 教室で指導</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">STEP 3</span>
+                    <p>90分の集中指導<br>お支払いはその場で完了</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="access" class="access">
+        <div class="container">
+            <h3 class="section-title">教室で学びたい方へ</h3>
+            <p>ご自宅での指導が難しい場合は、伊勢丘の「いなかの個人塾 midori」をご利用いただけます。<br>駐車場もございます。</p>
+            <p style="font-weight:bold; margin-top:20px;">📍 いなかの個人塾 midori</p>
+            <p>広島県福山市伊勢丘8番地14-29 2号</p>
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.683526145341!2d133.40778641126756!3d34.409392298687784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3551105307559e1f%3A0x6b2e1f2f8b8b8b8b!2z5bqD5bO255yM56aP5bGx5biC5LyK5Yui5LiY77yY4oiS77yR77yU4oiS77yS77yZ!5e0!3m2!1sja!2sjp!4v1707050000000!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h3 class="contact-title">まずはLINEでご相談ください</h3>
+            <p>「〇〇高校の数学がヤバい」「明日、教室に行きたい」など<br>お気軽にお送りください。</p>
+            <p style="font-size:0.9rem; color:#E60012; font-weight:bold; margin-top:20px;">※未成年の方は、必ず保護者の方の了承を得てからご連絡ください。</p>
+            
+            <div class="qr-box">
+                <img src="https://placehold.jp/200x200.png?text=LINE%20QR" alt="公式LINE QRコード" class="qr-img">
+            </div>
+            <a href="#" class="btn-primary btn-line">LINE友達追加はこちら</a>
+        </div>
+    </section>
+
+    <section class="operator">
+        <div class="container">
+            <h3 class="section-title">安心の運営母体</h3>
+            <p>「岡大生講師の119」は、東福山駅周辺で実績のある<br>「いなかの個人塾 midori」が責任を持って運営しています。</p>
+            <a href="https://www.sanyo-seinen-teachers.com" target="_blank" class="btn-midori">midori 公式サイトを見る ↗</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 岡大生講師の119 (いなかの個人塾 midori)</p>
+    </footer>
+
+</body>
+</html>
