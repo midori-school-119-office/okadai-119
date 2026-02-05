@@ -89,6 +89,13 @@
         .arrow { color: var(--dark); margin: 0 15px; font-weight: bold; font-size: 1.5rem; vertical-align: middle; }
         .campaign-note { font-size: 0.8rem; color: #666; margin-top: 10px; }
 
+        /* 特典セクション（新設） */
+        .benefit { background: #e6f7ee; padding: 60px 0; text-align: center; border-bottom: 5px solid var(--primary); }
+        .benefit-box { background: white; padding: 40px; border-radius: 15px; border: 3px solid var(--primary); display: inline-block; max-width: 800px; position: relative; }
+        .benefit-badge { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: var(--accent); color: white; padding: 10px 30px; font-weight: bold; border-radius: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .benefit-title { font-size: 1.8rem; font-weight: 900; color: var(--primary); margin: 20px 0 10px; }
+        .benefit-desc { font-size: 1.1rem; font-weight: bold; margin-bottom: 0; }
+
         /* 特徴 */
         .features { padding: 80px 0; }
         .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
@@ -124,9 +131,15 @@
         .discount-tag { color: var(--accent); font-weight: bold; font-size: 0.9rem; background: #ffebeb; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }
         
         .price-note { text-align: left; background: #f9f9f9; padding: 25px; border-radius: 8px; font-size: 0.9rem; color: #555; margin-top: 30px; border-left: 5px solid var(--accent); }
-        .price-note h4 { margin: 0 0 10px; color: var(--dark); font-size: 1rem; }
+        .price-note h4 { margin: 15px 0 10px; color: var(--dark); font-size: 1rem; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        .price-note h4:first-child { margin-top: 0; }
         .price-note ul { padding-left: 20px; margin-bottom: 15px; }
         .price-note strong { color: var(--accent); }
+
+        /* 安心・安全 */
+        .safety { background: #fff5f5; padding: 50px 0; text-align: center; }
+        .safety-box { border: 2px solid var(--accent); padding: 30px; border-radius: 10px; background: white; display: inline-block; max-width: 800px; }
+        .safety-title { color: var(--accent); font-size: 1.5rem; font-weight: 900; margin-bottom: 15px; }
 
         /* 流れ */
         .flow { padding: 80px 0; background: #f4f7f6; }
@@ -218,6 +231,21 @@
         </div>
     </section>
 
+    <section class="benefit">
+        <div class="container">
+            <div class="benefit-box">
+                <div class="benefit-badge">ご利用特典</div>
+                <h3 class="benefit-title">自習室が無料で使い放題！</h3>
+                <p class="benefit-desc">
+                    岡大生講師の119をご利用いただくと、<br>
+                    申し込みの翌日から2週間、<br>
+                    <span style="background: linear-gradient(transparent 70%, #ffeb3b 70%);">「いなかの個人塾 midori」の自習室が無料</span>で使えます。<br>
+                    <span style="font-size:0.9rem; font-weight:normal; color:#666;">（Wi-Fi完備・冷暖房完備・伊勢丘教室）</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
     <section id="about" class="features">
         <div class="container">
             <h3 class="section-title">岡大生講師の119が選ばれる理由</h3>
@@ -264,7 +292,8 @@
                 <div class="price-card">
                     <div class="card-header header-adv">
                         <span class="course-name">集中治療コース</span>
-                        <span class="course-sub">土日等で弱点克服</span> </div>
+                        <span class="course-sub">土日等で弱点克服</span>
+                    </div>
                     <div class="card-body">
                         <div>
                             <div class="discount-tag">1,000円お得</div>
@@ -278,7 +307,8 @@
                     <div class="recommend-badge">人気No.1</div>
                     <div class="card-header header-pro">
                         <span class="course-name">奇跡の逆転コース</span>
-                        <span class="course-sub">テスト前3回分</span> </div>
+                        <span class="course-sub">テスト前3回分</span>
+                    </div>
                     <div class="card-body">
                         <div>
                             <div class="discount-tag">2,000円お得</div>
@@ -304,19 +334,31 @@
             </div>
 
             <div class="price-note">
-                <h4>【お支払い・ご利用ルール】</h4>
+                <h4>【お支払いについて】</h4>
                 <ul>
                     <li>価格はすべて税込です。東福山駅周辺エリアは交通費込みです。</li>
-                    <li>複数回コース（2回・3回）は、<strong>初回から2週間以内</strong>にご利用ください。</li>
-                    <li>複数回コースのお支払いは、<strong>初回指導終了時に全額現金払い</strong>となります。</li>
+                    <li>お支払いは<strong>現金のみ</strong>となります。<strong>お釣りのないようご準備をお願いいたします。</strong></li>
+                    <li>複数回コースは、<strong>初回指導終了時に全額</strong>お支払いいただきます。</li>
+                    <li>領収書は授業終了後、<strong>LINEにて電子レシート</strong>をお送りします。</li>
                 </ul>
 
-                <h4>【担当講師の指名・交代について】</h4>
+                <h4>【担当講師・ご利用ルール】</h4>
                 <ul>
-                    <li>複数回コースは原則同じ講師が担当しますが、<strong>日ごとに担当を変更することも可能</strong>です。</li>
+                    <li>複数回コース（2回・3回）は、<strong>初回から2週間以内</strong>にご利用ください。</li>
+                    <li>担当講師を日ごとに変更することも可能です。</li>
                     <li>万が一相性が合わない場合、LINEでご連絡いただければ<strong>無料で他の講師に交代</strong>いたします。</li>
-                    <li>2回目以降のご利用時も、「前回とは違う人で」といったリクエストが可能です。</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="safety">
+        <div class="container">
+            <div class="safety-box">
+                <div class="safety-title">⚠️ 安心・安全への取り組み</div>
+                <p>生徒様・保護者様に安心してご利用いただくため、<br>
+                <strong>講師と生徒様のLINE等での連絡先交換は禁止</strong>しております。<br>
+                日程変更やご相談は、すべて運営の公式LINEにて承ります。</p>
             </div>
         </div>
     </section>
@@ -332,7 +374,7 @@
                 </div>
                 <div class="step">
                     <span class="step-num">STEP 2</span>
-                    <p>最短当日に講師を手配<br>ご自宅 または 教室で指導</p>
+                    <p>最短翌日に講師を手配<br>ご自宅 または 教室で指導</p>
                 </div>
                 <div class="step">
                     <span class="step-num">STEP 3</span>
