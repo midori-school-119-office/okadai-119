@@ -7,17 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
-        /* メインページと同じデザインCSS */
+        /* 共通CSS */
         :root {
             --primary: #00A960;
             --accent: #E60012;
             --dark: #0f2350;
-            --gold: #f5b120;
             --light: #f4f7f6;
             --white: #ffffff;
             --text: #333333;
         }
-
         body {
             font-family: 'Noto Sans JP', sans-serif;
             color: var(--text);
@@ -26,65 +24,41 @@
             line-height: 1.6;
             background-color: var(--light);
         }
-
         a { text-decoration: none; transition: 0.3s; }
         .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-
-        /* ヘッダー */
         .header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
         .header-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
         .logo { font-size: 1.6rem; color: var(--accent); margin: 0; font-weight: 900; line-height: 1; }
-        .logo a { color: var(--accent); }
-        .logo span { color: var(--dark); }
-        .recruit-badge { font-size: 0.8rem; background: var(--primary); color: white !important; padding: 3px 8px; border-radius: 4px; vertical-align: middle; margin-left: 10px; }
-        
-        .nav { display: flex; align-items: center; }
-        .nav a { color: var(--dark); margin-left: 20px; font-weight: bold; font-size: 0.9rem; }
-        .nav-back { border: 1px solid #ddd; padding: 5px 15px; border-radius: 50px; }
+        .nav-back { border: 1px solid #ddd; padding: 5px 15px; border-radius: 50px; color: var(--dark); font-weight: bold; font-size: 0.9rem; }
         .nav-back:hover { background: #eee; }
 
-        /* 求人メインビジュアル */
-        .recruit-hero {
-            background: linear-gradient(135deg, var(--primary) 0%, #008f52 100%); 
-            color: white; padding: 80px 20px; text-align: center;
-        }
-        .hero-title { font-size: 2.5rem; margin-bottom: 20px; line-height: 1.3; font-weight: 900; }
-        .hero-sub { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.95; }
+        .recruit-hero { background: linear-gradient(135deg, var(--primary) 0%, #008f52 100%); color: white; padding: 80px 20px; text-align: center; }
+        .hero-title { font-size: 2.5rem; margin-bottom: 20px; font-weight: 900; }
+        .hero-sub { font-size: 1.2rem; opacity: 0.95; }
         .badge-recruit { background: var(--white); color: var(--primary); padding: 5px 15px; font-weight: bold; border-radius: 4px; display: inline-block; margin-bottom: 15px; }
 
-        /* セクション共通 */
         .section-title { font-size: 1.8rem; text-align: center; color: var(--dark); margin-bottom: 40px; font-weight: 900; }
-        .section-title::after { content: ""; display: block; width: 60px; height: 4px; background: var(--primary); margin: 15px auto 0; border-radius: 2px; }
+        .section-title::after { content: ""; display: block; width: 60px; height: 4px; background: var(--primary); margin: 15px auto 0; }
 
-        /* 特徴 */
         .features { padding: 60px 0; background: white; }
         .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
         .feature-item { background: #f9f9f9; padding: 30px; border-radius: 10px; text-align: center; }
-        .feature-item h4 { color: var(--dark); font-size: 1.2rem; margin-bottom: 10px; font-weight: bold; }
         .feature-emoji { font-size: 2.5rem; margin-bottom: 10px; display: block; }
+        .feature-item h4 { font-weight: bold; margin-bottom: 10px; }
 
-        /* 募集要項テーブル */
         .recruit-detail { padding: 60px 0; }
         .recruit-table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         .recruit-table th, .recruit-table td { border: 1px solid #ddd; padding: 15px; text-align: left; }
         .recruit-table th { background: #f0fdf4; width: 30%; color: var(--primary); font-weight: bold; }
 
-        /* 応募エリア */
         .contact { text-align: center; padding: 80px 0; background: #eef9f2; }
-        .contact-title { font-size: 1.8rem; color: var(--dark); font-weight: 900; margin-bottom: 10px; }
-        .qr-box { margin: 30px auto; width: 180px; height: 180px; background: white; padding: 10px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .qr-img { width: 100%; height: 100%; object-fit: contain; }
-        
         .btn-primary { display: inline-block; background: var(--accent); color: white; padding: 15px 40px; border-radius: 50px; font-size: 1.2rem; font-weight: bold; box-shadow: 0 4px 15px rgba(230, 0, 18, 0.4); }
-        .btn-primary:hover { transform: translateY(-2px); }
-        .btn-line { background: #06C755; box-shadow: 0 4px 15px rgba(6, 199, 85, 0.4); }
+        .qr-box { margin: 30px auto; width: 180px; height: 180px; background: white; padding: 10px; border-radius: 10px; }
+        .qr-img { width: 100%; height: 100%; object-fit: contain; }
 
         .footer { background: var(--dark); color: white; text-align: center; padding: 30px; font-size: 0.9rem; }
 
-        /* スマホ対応 */
         @media (max-width: 768px) {
-            .header-inner { flex-direction: column; }
-            .nav { margin-top: 15px; }
             .recruit-table th, .recruit-table td { display: block; width: 100%; box-sizing: border-box; }
             .recruit-table th { background: var(--primary); color: white; }
         }
@@ -94,7 +68,7 @@
 
     <header class="header">
         <div class="header-inner">
-            <h1 class="logo"><a href="index.html">岡大生講師の119</a> <span class="recruit-badge">講師募集</span></h1>
+            <h1 class="logo">岡大生講師の119 <span style="font-size:0.8rem; background:var(--primary); color:white; padding:3px 8px; border-radius:4px; vertical-align:middle;">講師募集</span></h1>
             <nav class="nav">
                 <a href="index.html" class="nav-back">← トップページに戻る</a>
             </nav>
@@ -105,7 +79,7 @@
         <div class="container">
             <span class="badge-recruit">東福山在住の岡大生へ</span>
             <h2 class="hero-title">あなたの空き時間を<br>「緊急対応」へ。</h2>
-            <p class="hero-sub">時給換算2,000円。シフト提出なし。<br>一番効率の良い教育バイト。</p>
+            <p class="hero-sub">業界最高水準の高時給。シフト提出なし。<br>一番効率の良い教育バイト。</p>
             <a href="#entry" class="btn-primary">応募方法を見る</a>
         </div>
     </section>
@@ -117,7 +91,7 @@
                 <div class="feature-item">
                     <span class="feature-emoji">💰</span>
                     <h4>高時給</h4>
-                    <p>1コマ90分で3,000円。移動時間を含めても圧倒的に効率よく稼げます。</p>
+                    <p>近隣の個別指導塾と比べても圧倒的な高時給設定。短時間で効率よく稼げます。</p>
                 </div>
                 <div class="feature-item">
                     <span class="feature-emoji">📅</span>
@@ -139,7 +113,7 @@
             <table class="recruit-table">
                 <tr>
                     <th>給与</th>
-                    <td>1コマ（90分） 3,000円<br><span style="font-size:0.8rem; color:#666;">※急なキャンセル時の待機手当あり</span></td>
+                    <td><strong>業界最高水準の高時給</strong><br><span style="font-size:0.8rem; color:#666;">※詳細は面接時にお伝えします</span></td>
                 </tr>
                 <tr>
                     <th>応募資格</th>
@@ -168,12 +142,12 @@
             <div class="qr-box">
                 <img src="https://placehold.jp/200x200.png?text=RECRUIT_QR" alt="応募用QRコード" class="qr-img">
             </div>
-            <a href="#" class="btn-primary btn-line">LINEで応募する</a>
+            <a href="#" class="btn-primary">LINEで応募する</a>
         </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2026 岡大生講師の119 (いなかの個人塾 midori)</p>
+        <p>© 2026 岡大生講師の119 (いなかの個人塾 midori)</p>
     </footer>
 
 </body>
