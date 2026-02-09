@@ -62,7 +62,7 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
             transition: transform 0.2s;
             vertical-align: middle;
-            white-space: nowrap; /* 文字の折り返しを防ぐ */
+            white-space: nowrap;
         }
         .midori-badge:hover { transform: translateY(-2px); opacity: 0.9; }
         
@@ -191,13 +191,9 @@
         .footer { background: var(--dark); color: white; text-align: center; padding: 30px; font-size: 0.9rem; }
         .footer a { color: #ccc; text-decoration: underline; }
 
-        /* ------------------------------------------- */
-        /* スマホ対応（レスポンシブデザイン） */
-        /* ------------------------------------------- */
+        /* スマホ対応 */
         @media (max-width: 768px) {
             .header-inner { flex-direction: column; }
-            
-            /* ロゴ周りの修正：縦並びにして重なりを防ぐ */
             .logo {
                 flex-direction: column;
                 align-items: center;
@@ -206,11 +202,10 @@
             }
             .midori-badge {
                 margin-left: 0;
-                margin-top: 8px; /* ロゴとの間に隙間を作る */
+                margin-top: 8px;
                 font-size: 0.8rem;
                 padding: 6px 15px;
             }
-
             .nav { margin-top: 5px; flex-wrap: wrap; justify-content: center; width: 100%; }
             .nav a { margin: 5px 10px; font-size: 0.8rem; }
             .btn-header { display: none; }
@@ -219,12 +214,10 @@
             .price-grid { grid-template-columns: 1fr; }
             .price-card { margin-bottom: 15px; }
             
-            /* 特典セクションのスマホ最適化 */
             .benefit-box { padding: 25px 15px !important; }
             .benefit-title { font-size: 1.4rem; }
             .benefit-desc { font-size: 0.95rem; line-height: 1.6; }
             
-            /* 改行の制御 */
             .pc-break { display: none; }
             .sp-break { display: block; }
         }
@@ -318,7 +311,7 @@
             <div class="price-grid">
                 <div class="price-card">
                     <div class="card-header header-basic">
-                        <span class="course-name">応急処置コース</span>
+                        <span class="course-name">スピード解決コース</span>
                         <span class="course-sub">まずはここから</span>
                     </div>
                     <div class="card-body">
@@ -332,7 +325,7 @@
 
                 <div class="price-card">
                     <div class="card-header header-adv">
-                        <span class="course-name">集中治療コース</span>
+                        <span class="course-name">短期集中特訓コース</span>
                         <span class="course-sub">土日等で弱点克服</span>
                     </div>
                     <div class="card-body">
@@ -347,7 +340,7 @@
                 <div class="price-card">
                     <div class="recommend-badge">人気No.1</div>
                     <div class="card-header header-pro">
-                        <span class="course-name">奇跡の逆転コース</span>
+                        <span class="course-name">テスト直前完成コース</span>
                         <span class="course-sub">テスト前3回分</span>
                     </div>
                     <div class="card-body">
